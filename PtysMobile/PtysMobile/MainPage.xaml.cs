@@ -18,7 +18,7 @@ namespace PtysMobile
             DebugClass();
             Device.StartTimer(new TimeSpan(0, 0, 4), () =>
             {
-                // do something every 6 seconds
+                // do something every 4 seconds
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     // interact with UI elements
