@@ -11,13 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="images\logo_cukiernia-ptys2.png" />
-    <None Remove="images\preloader11.png" />
+    <None Remove="preloader11.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="images\logo_cukiernia-ptys2.png" />
-    <EmbeddedResource Include="images\preloader11.png" />
+    <EmbeddedResource Include="preloader11.png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -16,6 +16,17 @@ namespace PtysMobile
         {
             InitializeComponent();
             DebugClass();
+            Device.StartTimer(new TimeSpan(0, 0, 4), () =>
+            {
+                // do something every 6 seconds
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    // interact with UI elements
+                    var greetingImage = this.FindByName<Image>("greeting");
+                    greetingImage.Style = (Style)Application.Current.Resources["greetingStyle"];
+                });
+                return true; // runs again, or false to stop
+            });
         }
 
         //wszystkie obrazy osadzone
