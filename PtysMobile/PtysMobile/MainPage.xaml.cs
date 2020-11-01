@@ -15,28 +15,15 @@ namespace PtysMobile
         public MainPage()
         {
             InitializeComponent();
-            DebugClass();
             Device.StartTimer(new TimeSpan(0, 0, 4), () =>
             {
                 // do something every 4 seconds
-                Device.BeginInvokeOnMainThread(() =>
+                Device.BeginInvokeOnMainThread(async() =>
                 {
-                    // interact with UI elements
-                    var greetingImage = this.FindByName<Image>("greeting");
-                    greetingImage.Style = (Style)Application.Current.Resources["greetingStyle"];
+                    await Navigation.PushAsync(new pageMainGalery());
                 });
                 return true; // runs again, or false to stop
             });
-        }
-
-        //wszystkie obrazy osadzone
-        public void DebugClass()
-        {
-            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
-            foreach (var res in assembly.GetManifestResourceNames())
-            {
-                System.Diagnostics.Debug.WriteLine("found resource: " + res);
-            }
         }
     }
 
