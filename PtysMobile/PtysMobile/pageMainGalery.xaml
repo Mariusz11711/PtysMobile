@@ -26,7 +26,7 @@
             </VisualStateManager.VisualStateGroups>
         </ImageButton>-->
 
-            <Button x:Name="Torty" Text="Torty"
+            <Button x:Name="Torty" Text="{Binding Torty}"
                 Clicked="OnButtonTortyClicked" />
 
             <Button x:Name="Torciki" Text="Torciki"                    
