@@ -7,7 +7,7 @@
     <FlexLayout Direction="Column"
                 AlignItems="Center"
                 JustifyContent="SpaceEvenly">
-        <Image x:Name="greeting" Source="{local:ImageResource PtysMobile.preloader11.png}"  />
+        <Image x:Name="greeting" Source="{local:ImageResource PtysMobile.1-LOGO.png}"  />
     </FlexLayout>
 
 </ContentPage>

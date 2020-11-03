@@ -1,57 +1,232 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PtysMobile;assembly=PtysMobile"
              x:Class="PtysMobile.pageMainGalery">
     <ContentPage.Content>
-        <StackLayout>
-            <!--IMAGE AND TEXT https://forums.xamarin.com/discussion/149307/button-with-image-and-text
-        <ImageButton  Source="XamarinLogo.png"
-                Clicked="OnButtonTortClicked">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                        <VisualState.Setters>
-                            <Setter Property="Scale"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="200" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="300" />
+            </Grid.ColumnDefinitions>
+            <AbsoluteLayout  Grid.Row="0" Grid.Column="0" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.Torty.png}" 
+                Clicked="OnButtonTortyClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
                             Value="1" />
-                            
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Pressed">
-                        <VisualState.Setters>
-                            <Setter Property="Scale"
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
                             Value="0.8" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-        </ImageButton>-->
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="0" Grid.Column="1" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.Torciki.png}"
+                Clicked="OnButtonTorcikiClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="1" Grid.Column="0" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.ciasta_deserowe.png}"
+                Clicked="OnButtonCiasta_deseroweClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="1" Grid.Column="1" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.babki.png}"
+                Clicked="OnButtonBabkiClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="2" Grid.Column="0" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.sernik.png}"
+                Clicked="OnButtonSernikiClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
 
-            <Button x:Name="Torty" Text="{Binding Torty}"
-                Clicked="OnButtonTortyClicked" />
-
-            <Button x:Name="Torciki" Text="Torciki"                    
-                Clicked="OnButtonTorcikiClicked" />
-
-            <Button Text="Ciasta deserowe"                
-                Clicked="OnButtonCiasta_deseroweClicked" />
-
-            <Button Text="Babki"
-                Clicked="OnButtonBabkiClicked" />
-
-            <Button Text="Serniki"
-                Clicked="OnButtonSernikiClicked" />
-
-            <Button Text="Ciasta wypiekane"
-                Clicked="OnButtonCiasta_wypiekaneClicked" />
-
-            <Button Text="Ciastka bankietowe"
-                Clicked="OnButtonCiastka_bankietoweClicked" />
-
-            <Button Text="Rolady"
-                Clicked="OnButtonRoladyClicked" />
-
-            <Button Text="Jableczniki"
-                Clicked="OnButtonJablecznikiClicked" />
-        </StackLayout>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="2" Grid.Column="1" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.ciasta.png}"
+                Clicked="OnButtonCiasta_wypiekaneClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="3" Grid.Column="0" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.Ciasteczka_bankietowe.png}"
+                Clicked="OnButtonCiasteczka_bankietoweClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="3" Grid.Column="1" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.Rolady.png}"
+                Clicked="OnButtonRoladyClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="4" Grid.Column="0" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.Jableczniki.png}"
+                Clicked="OnButtonBJablecznikiClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Row="4" Grid.Column="1" >
+                <ImageButton  Source="{local:ImageResource PtysMobile.1-LOGO.png}"
+                Clicked="OnButtonCreatorClicked">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </AbsoluteLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
