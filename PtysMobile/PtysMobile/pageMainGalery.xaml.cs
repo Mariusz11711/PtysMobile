@@ -44,7 +44,7 @@ namespace PtysMobile
         {
             await Navigation.PushAsync(new pageCiasta_wypiekane());
         }
-        async void OnButtonCiastka_bankietoweClicked(object sender, EventArgs e)
+        async void OnButtonCiasteczka_bankietoweClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new pageCiastka_bankietowe());
         }
@@ -52,9 +52,13 @@ namespace PtysMobile
         {
             await Navigation.PushAsync(new pageRolady());
         }
-        async void OnButtonJablecznikiClicked(object sender, EventArgs e)
+        async void OnButtonBJablecznikiClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new pageJableczniki());
+        }        
+        async void OnButtonCreatorClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new pageCreator());
         }
 
         #endregion

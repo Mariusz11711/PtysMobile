@@ -11,11 +11,39 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="preloader11.png" />
+    <None Remove="1-LOGO.jpg" />
+    <None Remove="1-LOGO.png" />
+    <None Remove="babki.png" />
+    <None Remove="ciasta.png" />
+    <None Remove="ciasta_deserowe.png" />
+    <None Remove="Ciasteczka_bankietowe.png" />
+    <None Remove="Jabłeczniki.png" />
+    <None Remove="Rolady.png" />
+    <None Remove="sernik.png" />
+    <None Remove="Serniki.png" />
+    <None Remove="Torciki.png" />
+    <None Remove="Torty.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="preloader11.png" />
+    <ApplicationDefinition Include="Serniki.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="1-LOGO.png" />
+    <EmbeddedResource Include="babki.png" />
+    <EmbeddedResource Include="ciasta.png" />
+    <EmbeddedResource Include="ciasta_deserowe.png" />
+    <EmbeddedResource Include="Ciasteczka_bankietowe.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="1-LOGO.jpg" />
+    <EmbeddedResource Include="Jabłeczniki.png" />
+    <EmbeddedResource Include="Rolady.png" />
+    <EmbeddedResource Include="sernik.png" />
+    <EmbeddedResource Include="Torciki.png" />
+    <EmbeddedResource Include="Torty.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +62,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="pageCiastka_bankietowe.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="pageCreator.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="pageJableczniki.xaml">
