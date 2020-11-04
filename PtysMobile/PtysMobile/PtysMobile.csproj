@@ -14,8 +14,10 @@
     <None Remove="1-LOGO.jpg" />
     <None Remove="1-LOGO.png" />
     <None Remove="babki.png" />
+    <None Remove="babki_mini.png" />
     <None Remove="ciasta.png" />
     <None Remove="ciasta_deserowe.png" />
+    <None Remove="ciasta_mini.png" />
     <None Remove="Ciasteczka_bankietowe.png" />
     <None Remove="Jabłeczniki.png" />
     <None Remove="Rolady.png" />
@@ -32,8 +34,10 @@
   <ItemGroup>
     <EmbeddedResource Include="1-LOGO.png" />
     <EmbeddedResource Include="babki.png" />
+    <EmbeddedResource Include="babki_mini.png" />
     <EmbeddedResource Include="ciasta.png" />
     <EmbeddedResource Include="ciasta_deserowe.png" />
+    <EmbeddedResource Include="ciasta_mini.png" />
     <EmbeddedResource Include="Ciasteczka_bankietowe.png" />
   </ItemGroup>
 
@@ -70,7 +74,7 @@
     <EmbeddedResource Update="pageJableczniki.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="pageMainGalery.xaml">
+    <EmbeddedResource Update="pageMainGalery2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="pageRolady.xaml">

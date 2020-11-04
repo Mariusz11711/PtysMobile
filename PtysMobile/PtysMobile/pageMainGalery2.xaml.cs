@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace PtysMobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class pageMainGalery : ContentPage
+    public partial class pageMainGalery2 : ContentPage
     {
-        public pageMainGalery()
+        public pageMainGalery2()
         {
             InitializeComponent();
             BindingContext = new AddMainGaleryElements();
@@ -55,7 +55,7 @@ namespace PtysMobile
         async void OnButtonBJablecznikiClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new pageJableczniki());
-        }        
+        }
         async void OnButtonCreatorClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new pageCreator());
