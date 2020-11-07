@@ -6,11 +6,11 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="200" />
-                <RowDefinition Height="200" />
-                <RowDefinition Height="200" />
-                <RowDefinition Height="200" />
-                <RowDefinition Height="200" />
+                <RowDefinition Height="160" />
+                <RowDefinition Height="160" />
+                <RowDefinition Height="160" />
+                <RowDefinition Height="160" />
+                <RowDefinition Height="160" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300" />
@@ -80,7 +80,7 @@
                 </ImageButton>
             </AbsoluteLayout>
             <AbsoluteLayout  Grid.Row="1" Grid.Column="1" >
-                <ImageButton  Source="{local:ImageResource PtysMobile.babki_mini.png}"
+                <ImageButton  Source="{local:ImageResource PtysMobile.babki_mini_1do3.png}"
                 Clicked="OnButtonBabkiClicked">
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroup x:Name="CommonStates">
@@ -123,7 +123,7 @@
                 </ImageButton>
             </AbsoluteLayout>
             <AbsoluteLayout  Grid.Row="2" Grid.Column="1" >
-                <ImageButton  Source="{local:ImageResource PtysMobile.ciasta_mini.png}"
+                <ImageButton  Source="{local:ImageResource PtysMobile.ciasta_mini_1do3.png}"
                 Clicked="OnButtonCiasta_wypiekaneClicked">
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroup x:Name="CommonStates">
