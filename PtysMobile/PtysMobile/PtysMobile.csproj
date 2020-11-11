@@ -13,18 +13,16 @@
   <ItemGroup>
     <None Remove="1-LOGO.jpg" />
     <None Remove="1-LOGO.png" />
-    <None Remove="babki_mini.png" />
     <None Remove="babki_mini_1do3.png" />
-    <None Remove="ciasta_deserowe.png" />
-    <None Remove="ciasta_mini.png" />
-    <None Remove="ciasta_mini_1do3.png" />
-    <None Remove="Ciasteczka_bankietowe.png" />
-    <None Remove="Jabłeczniki.png" />
-    <None Remove="Rolady.png" />
-    <None Remove="sernik.png" />
+    <None Remove="Images\ciasta_deserowe_521x348.jpg" />
+    <None Remove="Images\ciasta_mini_521x348.jpg" />
+    <None Remove="Images\Ciasteczka_bankietowe_521x348.jpg" />
+    <None Remove="Images\Jabłeczniki_521x348.jpg" />
+    <None Remove="Images\Rolady_521X348.jpg" />
+    <None Remove="Images\Serniki_521x348.jpg" />
+    <None Remove="Images\Torciki_521x348.jpg" />
+    <None Remove="Images\Torty_521x348.jpg" />
     <None Remove="Serniki.png" />
-    <None Remove="Torciki.png" />
-    <None Remove="Torty.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,21 +31,19 @@
 
   <ItemGroup>
     <EmbeddedResource Include="1-LOGO.png" />
-    <EmbeddedResource Include="babki_mini.png" />
-    <EmbeddedResource Include="babki_mini_1do3.png" />
-    <EmbeddedResource Include="ciasta_deserowe.png" />
-    <EmbeddedResource Include="ciasta_mini.png" />
-    <EmbeddedResource Include="ciasta_mini_1do3.png" />
-    <EmbeddedResource Include="Ciasteczka_bankietowe.png" />
+    <EmbeddedResource Include="Images\babki_mini_1do3.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="1-LOGO.jpg" />
-    <EmbeddedResource Include="Jabłeczniki.png" />
-    <EmbeddedResource Include="Rolady.png" />
-    <EmbeddedResource Include="sernik.png" />
-    <EmbeddedResource Include="Torciki.png" />
-    <EmbeddedResource Include="Torty.png" />
+    <EmbeddedResource Include="Images\ciasta_deserowe_521x348.jpg" />
+    <EmbeddedResource Include="Images\ciasta_mini_521x348.jpg" />
+    <EmbeddedResource Include="Images\Ciasteczka_bankietowe_521x348.jpg" />
+    <EmbeddedResource Include="Images\Jabłeczniki_521x348.jpg" />
+    <EmbeddedResource Include="Images\Rolady_521X348.jpg" />
+    <EmbeddedResource Include="Images\Serniki_521x348.jpg" />
+    <EmbeddedResource Include="Images\Torciki_521x348.jpg" />
+    <EmbeddedResource Include="Images\Torty_521x348.jpg" />
   </ItemGroup>
 
   <ItemGroup>
