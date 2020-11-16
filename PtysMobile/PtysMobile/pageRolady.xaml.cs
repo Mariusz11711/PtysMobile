@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PtysMobile.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace PtysMobile
     {
         public pageRolady()
         {
+            BindingContext = new AddRoladyItems();
             InitializeComponent();
         }
     }
