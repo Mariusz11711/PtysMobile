@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:PtysMobile;assembly=PtysMobile"
-             x:Class="PtysMobile.pageRolady"
-             ControlTemplate="{StaticResource MainTemplate}">
-    <CollectionView ItemsSource="{Binding RoladyItems}" ItemsLayout="VerticalList">
+             x:Class="PtysMobile.pageShoppingCart">
+    <ContentPage.Content>
+        <Button Text="BACK TO SHOPPING" Clicked="Button_Clicked" />
+    </ContentPage.Content>
+    <CollectionView ItemsSource="{Binding NodeShoppingList}" ItemsLayout="VerticalList">
         <CollectionView.Header>
             <StackLayout BackgroundColor="LightGray">
                 <Label Margin="10,0,0,0"
-                   Text="Rolady"
-                   FontFamily="Lobster" />
+                   Text="Koszyk"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
             </StackLayout>
         </CollectionView.Header>
         <CollectionView.ItemTemplate>
@@ -18,33 +20,32 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Image Grid.RowSpan="3"
+                    <Image Grid.RowSpan="2"
                        Source="{Binding MyImageSource}"
                        Aspect="AspectFill"
-                       HeightRequest="150"
-                       WidthRequest="200" />
+                       HeightRequest="60"
+                       WidthRequest="60" />
                     <Label Grid.Column="1"
                        Text="{Binding Name}"
-                       FontSize="Large"
-                       FontFamily="MilkyNice"/>
-                    <!--<Label Grid.Row="1"
-                       Grid.Column="1"
-                       Text="{Binding Description}"
-                       FontAttributes="Bold" />-->
-                    <Label Grid.Row="2"
+                       FontAttributes="Bold" />
+                    <Label Grid.Row="1"
                        Grid.Column="1"
                        Text="{Binding Price}"
                        FontAttributes="Italic"
-                       FontSize="Medium"
                        VerticalOptions="End" />
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
+        <CollectionView.Footer>
+            <StackLayout>
+                <Button Text="BACK TO SHOPPING" Clicked="Button_Clicked" />
+            </StackLayout>
+        </CollectionView.Footer>
     </CollectionView>
+
 </ContentPage>

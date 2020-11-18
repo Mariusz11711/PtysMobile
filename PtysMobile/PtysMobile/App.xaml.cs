@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("PtysMobile//Fonts//MilkyNice.ttf", Alias = "MilkyNice")]
 namespace PtysMobile
 {
     public partial class App : Application
@@ -15,6 +16,7 @@ namespace PtysMobile
 
         protected override void OnStart()
         {
+
         }
 
         protected override void OnSleep()
@@ -23,6 +25,11 @@ namespace PtysMobile
 
         protected override void OnResume()
         {
+        }
+
+        private void ShoppingCart_Clicked(object sender, EventArgs e)
+        {
+            MainPage = new NavigationPage(new pageShoppingCart());
         }
     }
 }

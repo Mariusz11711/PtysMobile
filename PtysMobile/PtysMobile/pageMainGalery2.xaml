@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:PtysMobile;assembly=PtysMobile"
-             x:Class="PtysMobile.pageMainGalery2">
+             x:Class="PtysMobile.pageMainGalery2"
+             ControlTemplate="{StaticResource MainTemplate}">
     <ContentPage.Content>
-        <Grid>
+        <Grid BackgroundColor="Chocolate">
             <Grid.RowDefinitions>
                 <RowDefinition Height="200" />
                 <RowDefinition Height="200" />
@@ -206,7 +207,7 @@
                     </VisualStateManager.VisualStateGroups>
                 </ImageButton>
             </AbsoluteLayout>
-            <AbsoluteLayout  Grid.Row="4" Grid.Column="1" >
+            <!--<AbsoluteLayout  Grid.Row="4" Grid.Column="1" >
                 <ImageButton  Source="{local:ImageResource PtysMobile.1-LOGO.png}"
                 Clicked="OnButtonCreatorClicked">
                     <VisualStateManager.VisualStateGroups>
@@ -226,7 +227,7 @@
                         </VisualStateGroup>
                     </VisualStateManager.VisualStateGroups>
                 </ImageButton>
-            </AbsoluteLayout>
+            </AbsoluteLayout>-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

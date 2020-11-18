@@ -14,6 +14,7 @@
     <None Remove="1-LOGO.jpg" />
     <None Remove="1-LOGO.png" />
     <None Remove="babki_mini_1do3.png" />
+    <None Remove="Fonts\MilkyNice.ttf" />
     <None Remove="Images\ciasta_deserowe_521x348.jpg" />
     <None Remove="Images\ciasta_mini_521x348.jpg" />
     <None Remove="Images\Ciasteczka_bankietowe_521x348.jpg" />
@@ -31,6 +32,7 @@
     <None Remove="Images\Torciki_521x348.jpg" />
     <None Remove="Images\Torty_521x348.jpg" />
     <None Remove="Serniki.png" />
+    <None Remove="shopping-cart-3-64x64.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +41,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="1-LOGO.png" />
+    <EmbeddedResource Include="Fonts\MilkyNice.ttf" />
     <EmbeddedResource Include="Images\babki_mini_1do3.png" />
   </ItemGroup>
 
@@ -60,6 +63,7 @@
     <EmbeddedResource Include="Images\Serniki_521x348.jpg" />
     <EmbeddedResource Include="Images\Torciki_521x348.jpg" />
     <EmbeddedResource Include="Images\Torty_521x348.jpg" />
+    <EmbeddedResource Include="shopping-cart-3-64x64.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -93,6 +97,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="pageSerniki.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="pageShoppingCart.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="pageTorciki.xaml">
