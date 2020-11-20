@@ -19,9 +19,14 @@ namespace PtysMobile
             InitializeComponent();
         }
 
-        async private void Button_Clicked(object sender, EventArgs e)
+        async private void Button_Back_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new pageMainGalery2());
+        }
+
+        async private void Button_Payment_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: ExportFont("PtysMobile//Fonts//MilkyNice.ttf", Alias = "MilkyNice")]
+[assembly: ExportFont("MilkyNice.ttf", Alias = "MilkyNice")]
 namespace PtysMobile
 {
     public partial class App : Application

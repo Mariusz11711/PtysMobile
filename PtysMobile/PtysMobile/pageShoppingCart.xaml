@@ -2,9 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PtysMobile.pageShoppingCart">
-    <ContentPage.Content>
-        <Button Text="BACK TO SHOPPING" Clicked="Button_Clicked" />
-    </ContentPage.Content>
     <CollectionView ItemsSource="{Binding NodeShoppingList}" ItemsLayout="VerticalList">
         <CollectionView.Header>
             <StackLayout BackgroundColor="LightGray">
@@ -43,7 +40,8 @@
         </CollectionView.ItemTemplate>
         <CollectionView.Footer>
             <StackLayout>
-                <Button Text="BACK TO SHOPPING" Clicked="Button_Clicked" />
+                <Button Text="BACK TO SHOPPING" Clicked="Button_Back_Clicked" />
+                <Button Text="Zapłac" Clicked="Button_Payment_Clicked" />
             </StackLayout>
         </CollectionView.Footer>
     </CollectionView>
