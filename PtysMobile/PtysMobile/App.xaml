@@ -1,16 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PtysMobile;assembly=PtysMobile"
              x:Class="PtysMobile.App">
     <Application.Resources>
-        <Style x:Key="greetingImage" TargetType="Image">
-            <Setter Property="IsVisible" Value="false"/>
-        </Style>
-        <Style x:Key="greetingButtonShow" TargetType="Button">
-            <Setter Property="IsVisible" Value="true"/>
-        </Style>
-        <Style x:Key="greetingButtonHide" TargetType="Button">
-            <Setter Property="IsVisible" Value="true"/>
-        </Style>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="MainTemplate">
+                <StackLayout>
+                    <ContentPresenter VerticalOptions="FillAndExpand"></ContentPresenter>
+                    <!--<Label Text="Footer"
+                           BackgroundColor="Chocolate"
+                           TextColor="White"
+                           VerticalOptions="End" />-->
+                    <Grid Padding="250, 10" BackgroundColor="Chocolate">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="70" />
+                        </Grid.ColumnDefinitions>
+                        <AbsoluteLayout  Grid.Row="0" Grid.Column="0" >
+                        <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="0.00"
+                       LineBreakMode="TailTruncation"
+                       FontAttributes="Bold"
+                       VerticalOptions="End" />
+                        </AbsoluteLayout>
+                        <AbsoluteLayout  Grid.Row="0" Grid.Column="1" >
+                        <ImageButton Source="{local:ImageResource PtysMobile.shopping-cart-3-64x64.png}" VerticalOptions="Center" Clicked="ShoppingCart_Clicked"/>
+                        </AbsoluteLayout>
+                    </Grid>
+                </StackLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

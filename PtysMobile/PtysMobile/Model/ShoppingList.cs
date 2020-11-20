@@ -5,13 +5,11 @@ using Xamarin.Forms;
 
 namespace PtysMobile.Model
 {
-    public class NodeItem
+    public class ShoppingList
     {
         public string ImagePath { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
         public double Price { get; set; }
-
         public ImageSource MyImageSource
         {
             get
