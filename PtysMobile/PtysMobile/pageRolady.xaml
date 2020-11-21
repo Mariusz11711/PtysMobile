@@ -19,6 +19,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
@@ -33,16 +34,19 @@
                        Text="{Binding Name}"
                        FontSize="Large"
                        FontFamily="MilkyNice"/>
-                    <!--<Label Grid.Row="1"
-                       Grid.Column="1"
-                       Text="{Binding Description}"
-                       FontAttributes="Bold" />-->
-                    <Label Grid.Row="2"
+                    <Label Grid.Row="1"
                        Grid.Column="1"
                        Text="{Binding Price}"
                        FontAttributes="Italic"
                        FontSize="Medium"
                        VerticalOptions="End" />
+                    <Button Grid.Row="2"
+                       Grid.Column="1"
+                       Text="Dodaj do koszyka" Clicked="Button_AddPanel_ClickedAsync" CommandParameter="{Binding .}"
+                       FontAttributes="Bold" />
+                    <ContentView Grid.Row="3"
+                                 Grid.ColumnSpan="2"
+                        x:Name="CView"/>
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
