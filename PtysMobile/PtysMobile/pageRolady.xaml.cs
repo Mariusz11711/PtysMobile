@@ -22,15 +22,16 @@ namespace PtysMobile
 
         private async void Button_AddPanel_ClickedAsync(object sender, EventArgs e)
         {
-            string result = await DisplayPromptAsync("Waga", "ile sztuk zamawiasz", initialValue: "1", maxLength: 2, keyboard: Keyboard.Numeric);
+            string result = await DisplayPromptAsync("Liczba", "ile sztuk zamawiasz", initialValue: "1", maxLength: 2, keyboard: Keyboard.Numeric);
             var _button = (Button)sender;
-            NodeItem temp2 = (NodeItem)_button.CommandParameter;
+            NodeItem commandPar = (NodeItem)_button.CommandParameter;
             Dictionary<string, string> product = new Dictionary<string, string>();
-            product.Add("Name", temp2.Name);
+            product.Add("Name", commandPar.Name);
             product.Add("Quantity", result);
-            product.Add("Price", (temp2.Price * int.Parse(result)).ToString());
+            product.Add("Price", (commandPar.Price * int.Parse(result)).ToString());
+            product.Add("ImagePath", commandPar.ImagePath);
 
-            //TODO dodac do koszyka
+            Tools.AddTools((object)product);
         }
     }
 }
