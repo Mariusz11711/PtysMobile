@@ -8,12 +8,11 @@ namespace PtysMobile.ViewModel
 {
     public class AddShoppingCartNode
     {
-        public ObservableCollection<ShoppingList> NodeShoppingList { get; set; }
+        public ObservableCollection<ShoppingCartList> CartList { get; set; }
 
         public AddShoppingCartNode()
         {
-            NodeShoppingList = new ObservableCollection<ShoppingList>();
-            NodeShoppingList.Add(new ShoppingList() { ImagePath = "PtysMobile.Images.Rolady._MG_8150_521x347.png", Name = "Rolada 1", Price = 9.99 });
+            CartList = new ObservableCollection<ShoppingCartList>();
         }
     }
 }

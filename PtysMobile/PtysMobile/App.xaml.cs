@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,6 +8,8 @@ namespace PtysMobile
 {
     public partial class App : Application
     {
+        List<object> _shoppCart2 = new List<object>();
+        public static List<object> _shoppCart { get; set; }
         public App()
         {
             InitializeComponent();
