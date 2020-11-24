@@ -20,13 +20,6 @@ namespace PtysMobile
             AddShoppingCartNode cartNode = createBindingSource();
 
             BindingContext = cartNode;
-
-            Button button = new Button
-            {
-                Text = "Navigate!",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center
-            };
             InitializeComponent();
             Content = AddCartElement();
 
