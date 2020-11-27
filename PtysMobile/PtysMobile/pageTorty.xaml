@@ -3,7 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PtysMobile.pageTorty"
              ControlTemplate="{StaticResource MainTemplate}">
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <CollectionView ItemsSource="{Binding NodeTortyEleements}"
+                                        SelectionMode="Single"                   
+                    SelectionChanged="OnCollectionViewSelectionChanged"
+                    SelectedItems="{Binding SelectedCategories}"
                 ItemsLayout="HorizontalList">
         <CollectionView.ItemTemplate>
             <DataTemplate>
