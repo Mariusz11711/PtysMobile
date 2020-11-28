@@ -27,6 +27,18 @@ namespace PtysMobile
             {
                 string current = (e.CurrentSelection.FirstOrDefault() as NodeTortyEleement)?.Name;
             }
+
+
+            //      //  StackLayout = new StackLayout()
+            //      //  {
+            //      //      Children = {
+
+            //      //     button
+
+            //      //}
+            //      //  };
+
+            //      //  stackLayout.Children.Add(content);
         }
     }
 }

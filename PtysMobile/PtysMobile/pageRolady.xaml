@@ -44,9 +44,9 @@
                        Grid.Column="1"
                        Text="Dodaj do koszyka" Clicked="Button_AddPanel_ClickedAsync" CommandParameter="{Binding .}"
                        FontAttributes="Bold" />
-                    <ContentView Grid.Row="3"
+                    <!--<ContentView Grid.Row="3"
                                  Grid.ColumnSpan="2"
-                        x:Name="CView"/>
+                        x:Name="CView"/>-->
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
