@@ -13,6 +13,12 @@
                             <VisualState.Setters>
                                 <Setter Property="BackgroundColor"
                                         Value="LightSkyBlue" />
+                                <Setter Property="HeightRequest"
+                                        Value="10"/>
+                                <Setter Property="Padding"
+                                        Value="10"/>
+                                <Setter Property="Margin"
+                                        Value="10"/>
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -20,28 +26,80 @@
             </Setter>
         </Style>
     </ContentPage.Resources>
-    <CollectionView ItemsSource="{Binding NodeTortyEleements}"
-                                        SelectionMode="Single"                   
+    <ContentPage.Content>
+        <StackLayout x:Name="stackL">
+
+
+        <CollectionView  x:Name="MyCollectionView" ItemsSource="{Binding NodeTortyEleements}" HeightRequest="80"
+                                        SelectionMode="Single"               
+                         
                     SelectionChanged="OnCollectionViewSelectionChanged"
-                    SelectedItems="{Binding SelectedCategories}"
+                    SelectedItem="{Binding SelectedCategories}"
                 ItemsLayout="HorizontalList">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Grid Padding="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="70" />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0"
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="45" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0"
                        Grid.Column="0"
-                       Text="{Binding Name}"
-                       LineBreakMode="TailTruncation"
+                       Text="{Binding NameMenu}"
+
                        FontAttributes="Italic"
                        VerticalOptions="End" />
-                </Grid>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+            <CollectionView ItemsSource="{Binding  NodeTortyEleements}" x:Name="verticalList">
+                <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="3"
+                       Source="{Binding MyImageSource}"
+                       Aspect="AspectFill"
+                       HeightRequest="150"
+                       WidthRequest="200" />
+                            <Label Grid.Column="1"
+                       Text="{Binding Name}"
+                       FontSize="Large"
+                       FontFamily="MilkyNice"/>
+                            <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Price}"
+                       FontAttributes="Italic"
+                       FontSize="Medium"
+                       VerticalOptions="End" />
+                            <Button Grid.Row="2"
+                       Grid.Column="1"
+                       Text="Dodaj do koszyka" Clicked="Button_AddPanel_ClickedAsync2" CommandParameter="{Binding .}"
+                       FontAttributes="Bold" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+            </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -6,6 +6,6 @@ namespace PtysMobile.Model
 {
     public class NodeTortyEleement
     {        
-        public string Name { get; set; }
+        public string NameMenu { get; set; }
     }
 }

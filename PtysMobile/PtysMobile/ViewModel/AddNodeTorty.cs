@@ -9,6 +9,7 @@ namespace PtysMobile.ViewModel
 {
     public class AddNodeTorty
     {
+        public ObservableCollection<NodeItem> NodeItemElement { get; set; }
         public ObservableCollection<NodeTortyEleement> NodeTortyEleements { get; set; }
 
         NodeTortyEleement selectedCategories;
@@ -28,18 +29,20 @@ namespace PtysMobile.ViewModel
         }
         public AddNodeTorty()
         {
-            NodeTortyEleements = new ObservableCollection<NodeTortyEleement>();
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty standardowe" });
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty lodowe" }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty weselne" }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty dla dzieci" }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty na chrzciny" }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty na komunie" }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty dla firm," }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Torty okolicznosciowe," }); 
-            NodeTortyEleements.Add(new NodeTortyEleement() { Name = "Fototorty," });
+            NodeItemElement = new ObservableCollection<NodeItem>();
 
-            selectedCategories = NodeTortyEleements.Skip(3).FirstOrDefault();
+            NodeTortyEleements = new ObservableCollection<NodeTortyEleement>();
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty standardowe" });
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty lodowe" }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty weselne" }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty dla dzieci" }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty na chrzciny" }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty na komunie" }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty dla firm," }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Torty okolicznosciowe," }); 
+            NodeTortyEleements.Add(new NodeTortyEleement() { NameMenu = "Fototorty," });
+
+            selectedCategories = NodeTortyEleements.Skip(0).FirstOrDefault();
         }
     }
 }
