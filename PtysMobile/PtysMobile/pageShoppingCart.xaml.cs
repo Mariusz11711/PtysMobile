@@ -47,7 +47,7 @@ namespace PtysMobile
             Button button2 = new Button { Text = "Zapłac" };
             button2.Clicked += async (sender, args) =>
             {
-                await Navigation.PushAsync(new pageMainGalery2());
+                await Navigation.PushAsync(new pagePayment());
             };
 
             CollectionView collectionView = new CollectionView
@@ -125,15 +125,6 @@ namespace PtysMobile
 
             return collectionView;
         }
-
-        async private void Button_Back_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new pageMainGalery2());
-        }
-
-        async private void Button_Payment_Clicked(object sender, EventArgs e)
-        {
-
-        }
+   
     }
 }
